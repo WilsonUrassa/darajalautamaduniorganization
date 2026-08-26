@@ -10,112 +10,14 @@ const programmes = [
   { number: '07', title: 'Inclusion', text: 'Building inclusive spaces where women, young people and underserved groups can participate.' },
   { number: '08', title: 'Partnerships', text: 'Connecting communities, institutions, funders and responsible partners around shared goals.' },
 ];
-
 const values = ['Respect', 'Community ownership', 'Integrity', 'Inclusion', 'Sustainability', 'Partnership'];
-
-export default function HomePage() {
-  return (
-    <main>
-      <section className="hero">
-        <div className="hero-pattern" aria-hidden="true" />
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <p className="eyebrow">Daraja la Utamaduni Organization</p>
-            <h1>Building bridges for <em>people, culture and opportunity.</em></h1>
-            <p className="hero-lead">We work with communities to strengthen culture, expand opportunity and support sustainable development in Tanzania.</p>
-            <div className="hero-actions">
-              <Link href="#what-we-do" className="button button-primary">What we do</Link>
-              <Link href="#partner" className="button button-light">Partner with us <span>→</span></Link>
-            </div>
-          </div>
-          <div className="hero-art" aria-label="Community illustration">
-            <div className="sun" />
-            <div className="hill hill-one" />
-            <div className="hill hill-two" />
-            <div className="hero-card">
-              <span>Our approach</span>
-              <strong>Local knowledge.<br />Shared action.<br />Lasting impact.</strong>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="intro section">
-        <div className="container two-col">
-          <div>
-            <p className="eyebrow">Who we are</p>
-            <h2>A bridge between ideas and meaningful change.</h2>
-          </div>
-          <div className="intro-text">
-            <p>Daraja la Utamaduni Organization is a community-focused organization committed to creating practical pathways for sustainable development while respecting the knowledge, culture and aspirations of the people we serve.</p>
-            <p>Our work brings communities and partners together around solutions that can grow from local priorities into long-term impact.</p>
-            <Link href="#about" className="text-link">Discover our story <span>→</span></Link>
-          </div>
-        </div>
-      </section>
-
-      <section id="what-we-do" className="programme-section section section-soft">
-        <div className="container">
-          <div className="section-heading">
-            <div><p className="eyebrow">What we do</p><h2>Our programme areas</h2></div>
-            <p>Our work is designed around people and the realities of the communities we work with.</p>
-          </div>
-          <div className="programme-grid">
-            {programmes.map((item) => (
-              <article className="programme-card" key={item.number}>
-                <span className="programme-number">{item.number}</span>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-                <span className="card-arrow">↗</span>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="story section">
-        <div className="container story-grid">
-          <div className="story-visual">
-            <div className="visual-label">COMMUNITY • CULTURE • DEVELOPMENT</div>
-            <div className="visual-lines" />
-          </div>
-          <div className="story-copy">
-            <p className="eyebrow">Our philosophy</p>
-            <h2>Development should start with the people it is meant to serve.</h2>
-            <p>We believe sustainable change is stronger when communities are listened to, local strengths are recognised and people have a meaningful role in shaping solutions.</p>
-            <p>That means building relationships, learning together and creating partnerships that turn good ideas into practical action.</p>
-            <div className="value-list">{values.map((value) => <span key={value}>{value}</span>)}</div>
-          </div>
-        </div>
-      </section>
-
-      <section className="impact section section-earth">
-        <div className="container impact-grid">
-          <div><p className="eyebrow eyebrow-light">Our direction</p><h2>From local action to lasting impact.</h2><p>We connect community priorities with strategic partnerships, responsible implementation and learning so that development can remain relevant and sustainable.</p></div>
-          <div className="impact-items"><div><strong>01</strong><span>Listen to communities</span></div><div><strong>02</strong><span>Build practical solutions</span></div><div><strong>03</strong><span>Measure and learn</span></div><div><strong>04</strong><span>Grow responsible partnerships</span></div></div>
-        </div>
-      </section>
-
-      <section id="partner" className="partner section">
-        <div className="container partner-box">
-          <div><p className="eyebrow">Work with us</p><h2>Let’s build something that matters.</h2><p>We welcome partners who share our commitment to community-led development, culture and sustainable opportunity.</p></div>
-          <div className="partner-actions"><Link href="/#contact" className="button button-primary">Start a conversation</Link><Link href="/projects" className="button button-outline">View projects & proposals</Link></div>
-        </div>
-      </section>
-
-      <section className="updates section section-soft">
-        <div className="container">
-          <div className="section-heading"><div><p className="eyebrow">Stay connected</p><h2>Our work, stories and opportunities</h2></div><Link href="/gallery" className="text-link">Visit our gallery <span>→</span></Link></div>
-          <div className="update-grid"><div className="update-feature"><span>01</span><h3>Projects & proposals</h3><p>Explore current initiatives and partnership opportunities from Daraja la Utamaduni.</p><Link href="/projects">Explore →</Link></div><div className="update-card"><span>02</span><h3>Gallery</h3><p>See moments from our work with communities and partners.</p><Link href="/gallery">View gallery →</Link></div><div className="update-card accent-card"><span>03</span><h3>Get involved</h3><p>There are many ways to contribute skills, ideas and partnerships.</p><Link href="#contact">Contact us →</Link></div></div>
-        </div>
-      </section>
-
-      <section id="contact" className="contact section">
-        <div className="container contact-grid">
-          <div><p className="eyebrow">Contact</p><h2>Have an idea, question or partnership in mind?</h2><p>Tell us what you are working on and how you would like to connect.</p></div>
-          <div className="contact-panel"><p><strong>Daraja la Utamaduni Organization</strong></p><p>Tanzania</p><p className="contact-note">Use the contact form already connected to our Supabase system to send an enquiry securely.</p><Link href="/admin" className="text-link">Admin dashboard →</Link></div>
-        </div>
-      </section>
-    </main>
-  );
-}
+export default function HomePage() { return (<main>
+<section className="hero"><div className="hero-pattern" aria-hidden="true"/><div className="container hero-grid"><div className="hero-copy"><p className="eyebrow">Daraja la Utamaduni Organization</p><h1>Building bridges for <em>people, culture and opportunity.</em></h1><p className="hero-lead">We work with communities to strengthen culture, expand opportunity and support sustainable development in Tanzania.</p><div className="hero-actions"><Link href="#what-we-do" className="button button-primary">What we do</Link><Link href="#partner" className="button button-light">Partner with us <span>→</span></Link></div></div><div className="hero-art"><div className="sun"/><div className="hill hill-one"/><div className="hill hill-two"/><div className="hero-card"><span>Our approach</span><strong>Local knowledge.<br/>Shared action.<br/>Lasting impact.</strong></div></div></div></section>
+<section className="intro section"><div className="container two-col"><div><p className="eyebrow">Who we are</p><h2>A bridge between ideas and meaningful change.</h2></div><div className="intro-text"><p>Daraja la Utamaduni Organization is a community-focused organization committed to creating practical pathways for sustainable development while respecting the knowledge, culture and aspirations of the people we serve.</p><p>Our work brings communities and partners together around solutions that can grow from local priorities into long-term impact.</p><Link href="#about" className="text-link">Discover our story <span>→</span></Link></div></div></section>
+<section id="what-we-do" className="programme-section section section-soft"><div className="container"><div className="section-heading"><div><p className="eyebrow">What we do</p><h2>Our programme areas</h2></div><p>Our work is designed around people and the realities of the communities we work with.</p></div><div className="programme-grid">{programmes.map(item=><article className="programme-card" key={item.number}><span className="programme-number">{item.number}</span><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow">↗</span></article>)}</div></div></section>
+<section id="about" className="story section"><div className="container story-grid"><div className="story-visual"><div className="visual-label">COMMUNITY • CULTURE • DEVELOPMENT</div><div className="visual-lines"/></div><div className="story-copy"><p className="eyebrow">Our philosophy</p><h2>Development should start with the people it is meant to serve.</h2><p>We believe sustainable change is stronger when communities are listened to, local strengths are recognised and people have a meaningful role in shaping solutions.</p><p>That means building relationships, learning together and creating partnerships that turn good ideas into practical action.</p><div className="value-list">{values.map(value=><span key={value}>{value}</span>)}</div></div></div></section>
+<section className="impact section section-earth"><div className="container impact-grid"><div><p className="eyebrow eyebrow-light">Our direction</p><h2>From local action to lasting impact.</h2><p>We connect community priorities with strategic partnerships, responsible implementation and learning so that development can remain relevant and sustainable.</p></div><div className="impact-items"><div><strong>01</strong><span>Listen to communities</span></div><div><strong>02</strong><span>Build practical solutions</span></div><div><strong>03</strong><span>Measure and learn</span></div><div><strong>04</strong><span>Grow responsible partnerships</span></div></div></div></section>
+<section id="partner" className="partner section"><div className="container partner-box"><div><p className="eyebrow">Work with us</p><h2>Let’s build something that matters.</h2><p>We welcome partners who share our commitment to community-led development, culture and sustainable opportunity.</p></div><div className="partner-actions"><Link href="/#contact" className="button button-primary">Start a conversation</Link><Link href="/projects" className="button button-outline">View our programs</Link></div></div></section>
+<section className="updates section section-soft"><div className="container"><div className="section-heading"><div><p className="eyebrow">Stay connected</p><h2>Our programs, stories and opportunities</h2></div><Link href="/gallery" className="text-link">Visit our gallery <span>→</span></Link></div><div className="update-grid"><div className="update-feature"><span>01</span><h3>Programs we conduct</h3><p>Explore the programs and initiatives Daraja la Utamaduni is currently implementing with communities and partners.</p><Link href="/projects">Explore programs →</Link></div><div className="update-card"><span>02</span><h3>Gallery</h3><p>See moments from our work with communities and partners.</p><Link href="/gallery">View gallery →</Link></div><div className="update-card accent-card"><span>03</span><h3>Get involved</h3><p>There are many ways to contribute skills, ideas and partnerships.</p><Link href="#contact">Contact us →</Link></div></div></div></section>
+<section id="contact" className="contact section"><div className="container contact-grid"><div><p className="eyebrow">Contact</p><h2>Have an idea, question or partnership in mind?</h2><p>Tell us what you are working on and how you would like to connect.</p></div><div className="contact-panel"><p><strong>Daraja la Utamaduni Organization</strong></p><p>Tanzania</p><p className="contact-note">Use the contact form already connected to our Supabase system to send an enquiry securely.</p><Link href="/admin" className="text-link">Admin dashboard →</Link></div></div></section>
+</main>); }
